@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Cats Viewer</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>HTTP Cats Viewer</h1>
+        
+        <div class="search-container">
+            <input type="text" id="statusCode" placeholder="Ingresa un código de estado HTTP (ej: 200, 404, 500)" />
+            <button onclick="showCat()">Ver Gato</button>
+        </div>
+
+        <div class="examples">
+            <h2>Ejemplos comunes:</h2>
+            <div class="example-codes">
+                <button onclick="showCat(200)">200 - OK</button>
+                <button onclick="showCat(404)">404 - Not Found</button>
+                <button onclick="showCat(500)">500 - Internal Server Error</button>
+            </div>
+        </div>
+
+        <div id="cat-container" class="cat-container">
+            <!-- La imagen del gato se mostrará aquí -->
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+</html>
