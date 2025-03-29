@@ -1,12 +1,13 @@
 const express = require("express");
 const app = express();
+const path = require("path");
 
 // Servir archivos estáticos desde la carpeta public
-app.use("/", express.static("public"));
+app.use(express.static(path.join(__dirname, "public")));
 
 // Ruta principal
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public/index.html");
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 // Ruta para obtener gatos directamente
