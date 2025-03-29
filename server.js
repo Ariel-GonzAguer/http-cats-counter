@@ -1,8 +1,8 @@
 const express = require("express");
 const app = express();
 
-// Servir archivos estáticos desde la carpeta public para VERCEL
-app.use("/public", express.static("public"));
+// Servir archivos estáticos desde la carpeta public
+app.use(express.static("public"));
 
 // Ruta principal
 app.get("/", (req, res) => {
