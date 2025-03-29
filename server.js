@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 
 // Servir archivos estáticos desde la carpeta public
-app.use(express.static("public"));
+app.use("/public", express.static("public"));
 
 // Ruta principal
 app.get("/", (req, res) => {
